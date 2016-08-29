@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Image Zoom plugin for reveal JS</title>
+		<link rel="stylesheet" href="https://rawgit.com/hakimel/reveal.js/master/css/reveal.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <section>
+                        Here is an image (from <a href=https://en.wikipedia.org/wiki/Cat#/media/File:Cat_poster_1.jpg>wikipedia</a>),
+                        image_zoom plugin allows to zoom it, just by clicking on it<br/>
+                        <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cat_poster_1.jpg/1024px-Cat_poster_1.jpg width=40% />
+                        <br/>
+                        If you want to have two different images (e.g. another one with greater dimension on zoom, use data-src-zoom to specify the zoom image: <br/>
+                        <br/>
+                        <img src=320x240.png data-src-zoom=640x480.png width=30% />
+                        <br/>
+                        Finally, you can use data-zoom-height attribute to specify the height you want for your zoom image (for example here twice the screen):
+                        <br/>
+                        <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cat_poster_1.jpg/1024px-Cat_poster_1.jpg width=15% data-zoom-height=200% />
+                    </section>
+			</div>
+		</div>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+		<script src="https://raw.githubusercontent.com/hakimel/reveal.js/master/js/reveal.js"></script>
+		<script>
+Reveal.initialize({
+controls: true,
+dependencies: [ { src: 'https://raw.githubusercontent.com/yazgoo/image_zoom/master/image_zoom.js', async: true }, ],
+});
+        </script>
+	</body>
+</html>

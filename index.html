@@ -56,12 +56,9 @@
 								<li class="fragment">Our "<i>Thing</i>" is Software
 								<li class="fragment">Testing helps us deliver quality software
 								<li class="fragment">Testing predates software
-								<li class="fragment">And, Testing today falls under Quality
+							</ul>
 						</p>
 					</section>
-					<!-- sub pages
-					<section>
-					</section> -->
 				</section>
 
 
@@ -77,18 +74,109 @@
 								<li>CMM - Compatibility Maturity Model
 								<li>Deming - Plan-Do-Check-Act
 								<li>IEEE - Merging with ISO
+							</ul>
 						</p>
 					</section>
-					<!-- sub pages
-					<section>
-					</section> -->
 				</section>
+
+
+				<section>
+					<hr style="color:#0070C0;background-color:#0070C0;border:1px solid #B9D8EE;height:28px;align:top;" />
+					<section data-state="header1">
+						<h1>Testing in Perspective</h1>
+						<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+						<p style="color:#0070C0;font-size:66px;">Today, Testing falls under Quality</p>
+						<p style="color:#0070C0;font-size:66px;">
+							<ul>
+								<li>Testing is one component of Quality
+								<li>and, Quality is ...
+							</ul>
+						</p>
+					</section>
+				</section>
+
+
+				<section>
+					<hr style="color:#0070C0;background-color:#0070C0;border:1px solid #B9D8EE;height:28px;align:top;" />
+					<section data-state="header1">
+						<h1>Quality</h1>
+						<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+						<p style="color:#0070C0;font-size:66px;">Two main categories</p>
+						<p style="color:#0070C0;font-size:66px;">
+							<ul>
+								<li>Quality <b>Assurance</b>
+							<ul>
+								<li class="fragment">Planning, process management to prevent defects in the product: <i>proactive</i>
+							</ul>
+								<li>Quality <b>Control</b>
+							<ul>
+								<li class="fragment">Activity to ensure quality in the product through testing and other activity: <i>reactive</i> ===> testing
+							</ul>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+
+				<section>
+					<hr style="color:#0070C0;background-color:#0070C0;border:1px solid #B9D8EE;height:28px;align:top;" />
+					<section data-state="header1">
+						<h1>Quality</h1>
+						<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+						<p style="color:#0070C0;font-size:66px;">Two main categories</p>
+<!--
+<embed src="images/qaqc_001.svg" width="530px" height="190px" type="image/svg+xml" />
+<img src="images/qaqc_001.svg" data-zoom-height="300%"/>
+<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cat_poster_1.jpg/1024px-Cat_poster_1.jpg width=40% />
+<img src=images/qaqc_001.svg width=100% />
+-->
+<img src="images/qaqc_001.svg" data-zoom-height="300%"/>
+
+					</section>
+				</section>
+
+
+				<section>
+
+
+					<section>
+						<a href="images/qaqc_003.svg">zoom</a><br>
+						<img src=images/qaqc_003.svg width=100% />
+					</section>
+
+					<section>
+<object id="demo-tiger" type="image/svg+xml" data="images/qaqc_005.svg" style="width: 1024px; height: 700px; border:1px solid black; ">Your browser does not support SVG</object>
+					</section>
+
+
+
+
+
+					<section>
+						<a href="images/qaqc_004.svg">zoom</a><br>
+						<img src=images/qaqc_004.svg width=2048 />
+					</section>
+
+
+				</section>
+
+
+
+
+				<section>
+<a href="images/qaqc_002.svg">zoom</a><br>
+<img src=images/qaqc_002.svg width=100% />
+				</section>
+
+
+
 
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script src="js/svg-pan-zoom.js"></script>
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -127,6 +215,7 @@
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize("UCLA Library DIIT - © UC Regents 2016"); } },
+					{ src: 'plugin/image_zoom/image_zoom.js', async: true },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
@@ -135,5 +224,22 @@
 				]
 			});
 		</script>
+		<script>
+			document.querySelector( '.page-body' ).addEventListener( 'click', function( event ) {
+				event.preventDefault();
+				zoom.to({ element: event.target });
+			} );
+		</script>
+    <script>
+      // Don't use window.onLoad like this in production, because it can only listen to one function.
+      window.onload = function() {
+        svgPanZoom('#demo-tiger', {
+          zoomEnabled: true,
+          controlIconsEnabled: true
+        });
+      };
+    </script>
+
+
 	</body>
 </html>
