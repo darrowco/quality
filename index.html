@@ -53,7 +53,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-		<script src="js/svg-pan-zoom.js"></script>
+
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -96,7 +96,8 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'node_modules/reveal.js-menu/menu.js', async: true  }
 				]
 			});
 		</script>
