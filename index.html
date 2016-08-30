@@ -7,11 +7,10 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-		<link rel="stylesheet" href="plugin/title-footer/title-footer.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -25,9 +24,8 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
-poipoipoi
-				</section>
+				<section>Slide 1</section>
+				<section>Slide 2</section>
 			</div>
 		</div>
 
@@ -37,46 +35,13 @@ poipoipoi
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-
-				// The "normal" size of the presentation, aspect ratio will be preserved
-				// when the presentation is scaled to fit different resolutions. Can be
-				// specified using percentage units.
-				width: 960,
-				height: 700,
-
 				history: true,
-
-
-				menu: {
-					markers: true,
-					openSlideNumber: true,
-					themes: [
-						{ name: 'Black', theme: 'css/theme/black.css' },
-						{ name: 'White', theme: 'css/theme/white.css' },
-						{ name: 'League', theme: 'css/theme/league.css' },
-						{ name: 'Sky', theme: 'css/theme/sky.css' },
-						{ name: 'Beige', theme: 'css/theme/beige.css' },
-						{ name: 'Simple', theme: 'css/theme/simple.css' },
-						{ name: 'Serif', theme: 'css/theme/serif.css' },
-						{ name: 'Blood', theme: 'css/theme/blood.css' },
-						{ name: 'Night', theme: 'css/theme/night.css' },
-						{ name: 'Moon', theme: 'css/theme/moon.css' },
-						{ name: 'Solarized', theme: 'css/theme/solarized.css' }
-			        ],
-			        custom: [
-			            { title: 'Custom', icon: '<i class="fa fa-bookmark">', src: 'links.html' },
-			        ]
-				},
-
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize("UCLA Library DIIT - © UC Regents 2016"); } },
-					{ src: 'plugin/image_zoom/image_zoom.js', async: true },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'node_modules/reveal.js-menu/menu.js', async: true  }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 		</script>
